@@ -1,15 +1,14 @@
 import discord
+import os
 """
     CircleCI - pass tests
 """
-try:
-    from tokens import DISCORD_BOT_TOKEN, SERVER_OWNER_ID, COHERE_CHANNEL_NAME, COHERE_TOKEN, COHERE_MODEL_URL
-except Exception as e:
-    DISCORD_BOT_TOKEN = "nevergonnagiveyouup"
-    SERVER_OWNER_ID = "382072844714672207"
-    COHERE_CHANNEL_NAME = "yuripoosi"
-    COHERE_TOKEN = "nevergonnaletyoudown"
-    COHERE_MODEL_URL = "unsuable.com"
+
+DISCORD_BOT_TOKEN = os.environ["DISCORD_BOT_TOKEN"]
+SERVER_OWNER_ID = os.environ["SERVER_OWNER_ID"]
+COHERE_CHANNEL_NAME = os.environ["COHERE_CHANNEL_NAME"]
+COHERE_TOKEN = os.environ["COHERE_TOKEN"]
+COHERE_MODEL_URL = os.environ["COHERE_MODEL_URL"]
 
 import pandas as pd
 
